@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <!-- Include Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <style>
+    /* Body Background */
+    body {
+      background-color: #343a40; /* Dark background color */
+      color: #fff; /* Text color */
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    /* Product Image */
+    .product-image {
+      max-width: 100%;
+    }
+
+    /* Form */
+    form {
+      margin-top: 20px;
+    }
+
+    /* Form Inputs */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    /* Buy Now Button */
+    .btn-primary {
+      background-color: #007bff;
+      border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12">
+        <form action="response.html" method="post" class="cont" id="feedbackForm">
+          <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1">
+          </div>
+          <div class="form-group">
+            <label for="address">Address:</label>
+            <textarea class="form-control" id="address" name="address" rows="3" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="pincode">Pincode:</label>
+            <input type="text" class="form-control" id="pincode" name="pincode" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Place order</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Include Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the default form submission
+      
+      // Get form data
+      var formData = new FormData(this);
+    
+      // Example: Assuming response.html is in the same directory
+      window.location.href = "response.html";
+    });
+  </script>
+</body>
+</html>

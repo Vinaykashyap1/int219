@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add to Wishlist</title>
+</head>
+<body>
+  <h1>Product Page</h1>
+  <p>This is the product description.</p>
+  <button id="addToWishlist">Add to Wishlist</button>
+
+  <script>
+    // Get the button element
+    var addToWishlistButton = document.getElementById("addToWishlist");
+
+    // Add click event listener to the button
+    addToWishlistButton.addEventListener("click", function() {
+      // Perform the action when the button is clicked
+      addToWishlist();
+    });
+
+    // Function to add the product to the wishlist
+    function addToWishlist() {
+      // You can add your logic here to add the product to the wishlist
+      // For example, you can store the product ID in local storage or send it to the server
+      alert("Product added to wishlist!");
+    }
+  </script>
+</body>
+</html>
